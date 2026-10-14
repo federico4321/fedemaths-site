@@ -109,8 +109,10 @@ blockquote:before{content:"★★★★★";display:block;color:#e0a800;letter-s
 blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:14px;color:var(--muted)}
 /* tips */
 .tips{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:1000px) and (min-width:701px){.vids{grid-template-columns:repeat(2,1fr)}}
 .vid{margin:0}
+.vid iframe{width:100%;height:560px;border:1px solid var(--line);border-radius:16px;background:#fff;display:block}
 .vid video{width:100%;aspect-ratio:9/16;border-radius:16px;background:var(--navy);display:block;box-shadow:0 10px 30px rgba(24,33,74,.15)}
 .vid figcaption{margin-top:10px;font-weight:700;font-size:15px}
 .vid figcaption span{display:block;font-weight:400;color:var(--muted);font-size:14px}
@@ -120,7 +122,12 @@ blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;
 .rating b{font-size:28px;color:var(--ink)}
 .rating i{font-style:normal;color:#e0a800;letter-spacing:2px}
 .es .box{align-items:center}
-.es video{width:180px;aspect-ratio:9/16;border-radius:14px;background:var(--navy)}
+.es-ig{width:300px;max-width:100%;height:540px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.testi{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:center;margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.testi iframe{width:100%;height:560px;border:0;border-radius:12px}
+.testi h3{margin:0 0 8px;font-size:22px}
+.testi p{margin:0;color:var(--muted)}
+@media(max-width:760px){.testi{grid-template-columns:1fr}}
 /* faq */
 details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
@@ -149,7 +156,7 @@ footer a{color:#fff}
     <a href="#" class="logo">Fede <span>Maths</span></a>
     <ul>
       <li class="hide"><a href="#subjects">Subjects</a></li>
-      <li class="hide"><a href="#tips">Videos</a></li>
+      <li class="hide"><a href="#tips">Lessons</a></li>
       <li class="hide"><a href="#pricing">Pricing</a></li>
       <li class="hide"><a href="#about">About</a></li>
       <li><a class="btn btn-y" href="https://calendly.com/fededigregorio12/free-meeting">Free meeting</a></li>
@@ -212,14 +219,15 @@ footer a{color:#fff}
 <section class="tips" id="tips">
   <div class="wrap">
     <div class="kicker">Watch</div>
-    <h2>Quick maths tips</h2>
-    <p class="sub">20-second "spot the mistake" challenges based on the errors I see most in exams. Can you find it before the answer appears? New ones every week on Instagram.</p>
+    <h2>See how I teach</h2>
+    <p class="sub">Short lessons from my Instagram, worked step by step the same way I explain things in class.</p>
     <div class="vids">
-      <figure class="vid"><video src="videos/reel1.mp4" poster="videos/reel1.jpg" controls playsinline preload="none"></video><figcaption>Spot the mistake: chain rule<span>VCE Methods · HSC Advanced</span></figcaption></figure>
-      <figure class="vid"><video src="videos/reel2.mp4" poster="videos/reel2.jpg" controls playsinline preload="none"></video><figcaption>Spot the mistake: log laws<span>VCE Methods · HSC Advanced</span></figcaption></figure>
-      <figure class="vid"><video src="videos/reel3.mp4" poster="videos/reel3.jpg" controls playsinline preload="none"></video><figcaption>Spot the mistake: integration<span>VCE Methods · HSC Advanced</span></figcaption></figure>
+      <figure class="vid"><iframe src="https://www.instagram.com/reel/DQiuD4hkWfR/embed/" title="Simplifying with the difference of squares" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture; clipboard-write"></iframe><figcaption>Simplifying with the difference of squares<span>Algebra · Years 10–12</span></figcaption></figure>
+      <figure class="vid"><iframe src="https://www.instagram.com/reel/DRvCTaykzva/embed/" title="Graphing a line from its equation" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture; clipboard-write"></iframe><figcaption>Graphing a line from its equation<span>Linear functions · English &amp; Spanish</span></figcaption></figure>
+      <figure class="vid"><iframe src="https://www.instagram.com/reel/DQ43LvEE-1C/embed/" title="Limits with absolute value" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture; clipboard-write"></iframe><figcaption>Limits with absolute value<span>Calculus · English &amp; Spanish</span></figcaption></figure>
+      <figure class="vid"><iframe src="https://www.instagram.com/reel/DRxpQJ_k0gm/embed/" title="Difference of squares of consecutive numbers" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture; clipboard-write"></iframe><figcaption>Difference of squares of consecutive numbers<span>Number patterns · English &amp; Spanish</span></figcaption></figure>
     </div>
-    <p class="ig">More on Instagram: <a href="https://www.instagram.com/fede.mathtutor/"><strong>@fede.mathtutor</strong></a></p>
+    <p class="ig">More lessons on Instagram: <a href="https://www.instagram.com/fede.mathtutor/"><strong>@fede.mathtutor</strong></a></p>
   </div>
 </section>
 
@@ -287,6 +295,14 @@ footer a{color:#fff}
       <blockquote>Federico is an outstanding mathematics teacher who truly cares about his students' learning and progress.<cite>Nicolas Marcelo</cite></blockquote>
       <blockquote>He is patient, reliable, and explains concepts clearly and simply.<cite>Fati</cite></blockquote>
     </div>
+    <div class="testi">
+      <iframe src="https://www.instagram.com/reel/DN4gaPEjRJ3/embed/" title="Video testimonial from Pablo" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+      <div>
+        <div class="kicker">Video testimonial</div>
+        <h3>Pablo, former student</h3>
+        <p>Pablo is now a public accountant and founder of an AI automation company. In this video (in Spanish) he talks about how starting lessons with me early helped him pass his first-year subject at Colegio Pellegrini, one of Buenos Aires' most demanding secondary schools.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -309,7 +325,7 @@ footer a{color:#fff}
       <h2>¿Estudiás en Argentina?</h2>
       <p class="sub" style="margin:0">Clases online de Análisis Matemático, Álgebra y Física para el CBC y la universidad. Escribime por Instagram y armamos un plan para tu materia.</p>
     </div>
-    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><video src="videos/reel4.mp4" poster="videos/reel4.jpg" controls playsinline preload="none" aria-label="Límites en 20 segundos"></video><a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a></div>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><iframe class="es-ig" src="https://www.instagram.com/reel/DQNSR5SEUAc/embed/" title="Recta tangente – Matemática 51 CBC" loading="lazy" scrolling="no" allowtransparency="true"></iframe><a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a></div>
   </div>
 </section>
 
