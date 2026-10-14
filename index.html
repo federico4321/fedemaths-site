@@ -107,6 +107,20 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;line-height:1.15;margin
 blockquote{margin:0;background:#fff;border-radius:16px;padding:24px;border:1px solid var(--line);font-size:16px}
 blockquote:before{content:"★★★★★";display:block;color:#e0a800;letter-spacing:2px;margin-bottom:10px}
 blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:14px;color:var(--muted)}
+/* tips */
+.tips{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vid{margin:0}
+.vid video{width:100%;aspect-ratio:9/16;border-radius:16px;background:var(--navy);display:block;box-shadow:0 10px 30px rgba(24,33,74,.15)}
+.vid figcaption{margin-top:10px;font-weight:700;font-size:15px}
+.vid figcaption span{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.ig{margin-top:24px;font-size:15px}
+@media(max-width:700px){.vids{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.vid{scroll-snap-align:start}}
+.rating{display:flex;align-items:center;gap:12px;margin:-16px 0 28px;font-size:15px;color:var(--muted)}
+.rating b{font-size:28px;color:var(--ink)}
+.rating i{font-style:normal;color:#e0a800;letter-spacing:2px}
+.es .box{align-items:center}
+.es video{width:180px;aspect-ratio:9/16;border-radius:14px;background:var(--navy)}
 /* faq */
 details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
@@ -135,6 +149,7 @@ footer a{color:#fff}
     <a href="#" class="logo">Fede <span>Maths</span></a>
     <ul>
       <li class="hide"><a href="#subjects">Subjects</a></li>
+      <li class="hide"><a href="#tips">Videos</a></li>
       <li class="hide"><a href="#pricing">Pricing</a></li>
       <li class="hide"><a href="#about">About</a></li>
       <li><a class="btn btn-y" href="https://calendly.com/fededigregorio12/free-meeting">Free meeting</a></li>
@@ -191,6 +206,20 @@ footer a{color:#fff}
       <div class="step"><h3>Get a plan</h3><p>I map out the topics and past-paper practice that will make the biggest difference before your next assessment.</p></div>
       <div class="step"><h3>Weekly lessons</h3><p>Focused one-to-one sessions. Parents get short progress notes so they always know how things are going.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="tips" id="tips">
+  <div class="wrap">
+    <div class="kicker">Watch</div>
+    <h2>Quick maths tips</h2>
+    <p class="sub">20-second "spot the mistake" challenges based on the errors I see most in exams. Can you find it before the answer appears? New ones every week on Instagram.</p>
+    <div class="vids">
+      <figure class="vid"><video src="videos/reel1.mp4" poster="videos/reel1.jpg" controls muted playsinline preload="none"></video><figcaption>Spot the mistake: chain rule<span>VCE Methods · HSC Advanced</span></figcaption></figure>
+      <figure class="vid"><video src="videos/reel2.mp4" poster="videos/reel2.jpg" controls muted playsinline preload="none"></video><figcaption>Spot the mistake: log laws<span>VCE Methods · HSC Advanced</span></figcaption></figure>
+      <figure class="vid"><video src="videos/reel3.mp4" poster="videos/reel3.jpg" controls muted playsinline preload="none"></video><figcaption>Spot the mistake: integration<span>VCE Methods · HSC Advanced</span></figcaption></figure>
+    </div>
+    <p class="ig">More on Instagram: <a href="https://www.instagram.com/fede.mathtutor/"><strong>@fede.mathtutor</strong></a></p>
   </div>
 </section>
 
@@ -252,7 +281,7 @@ footer a{color:#fff}
   <div class="wrap">
     <div class="kicker">What students say</div>
     <h2>Reviews</h2>
-    <p class="sub">From my Superprof profile.</p>
+    <div class="rating"><b>5.0</b><i>★★★★★</i><span>Every recommendation on my Superprof profile is 5 stars.</span></div>
     <div class="reviews">
       <blockquote>Excellent math teacher: he explains things clearly, patiently, and with well-thought-out examples.<cite>Facundo</cite></blockquote>
       <blockquote>Federico is an outstanding mathematics teacher who truly cares about his students' learning and progress.<cite>Nicolas Marcelo</cite></blockquote>
@@ -280,7 +309,7 @@ footer a{color:#fff}
       <h2>¿Estudiás en Argentina?</h2>
       <p class="sub" style="margin:0">Clases online de Análisis Matemático, Álgebra y Física para el CBC y la universidad. Escribime por Instagram y armamos un plan para tu materia.</p>
     </div>
-    <a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><video src="videos/reel4.mp4" poster="videos/reel4.jpg" controls muted playsinline preload="none" aria-label="Límites en 20 segundos"></video><a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a></div>
   </div>
 </section>
 
