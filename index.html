@@ -139,6 +139,11 @@ blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;
 .es-list li:before{content:"✓";position:absolute;left:0;color:#b07d00;font-weight:800}
 .es-more{margin:14px 0 0;font-size:14px;color:var(--muted)}
 @media(max-width:860px){.es-grid{grid-template-columns:1fr}.es-grid .es-ig{max-width:340px;margin:0 auto;order:2}.es-cards{grid-template-columns:1fr}}
+.story{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center;margin-top:48px}
+.story iframe{width:100%;height:580px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.story h3{font-size:26px;margin:0 0 10px;letter-spacing:-.02em}
+.story p{color:var(--muted);margin:0 0 22px;max-width:520px}
+@media(max-width:760px){.story{grid-template-columns:1fr}.story iframe{max-width:340px;margin:0 auto}}
 /* faq */
 details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
@@ -292,6 +297,15 @@ footer a{color:#fff}
         <li><b>✓</b>Registered teacher in Victoria (VIT) and New South Wales (NESA)</li>
         <li><b>🗣</b>Lessons in English or Spanish</li>
       </ul>
+    </div>
+  </div>
+  <div class="wrap story">
+    <iframe src="https://www.instagram.com/reel/DRkwsBoFfCg/embed/" title="Fede tells his story" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+    <div>
+      <div class="kicker">My story</div>
+      <h3>Hear it from me</h3>
+      <p>In this short video I talk about how I teach and why I believe understanding beats memorising. It's in Spanish, the language I first taught in, back in Buenos Aires.</p>
+      <a class="btn btn-y" href="https://calendly.com/fededigregorio12/free-meeting">Book a free 20-min meeting</a>
     </div>
   </div>
 </section>
