@@ -10,6 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fede Maths | Online Senior Maths Tutor">
 <meta property="og:description" content="VCE, HSC, SACE and QCE maths, live one-to-one online. Free 20-minute first meeting.">
+<meta property="og:image" content="https://fedemaths.com.au/fede.jpg">
 <meta property="og:url" content="https://fedemaths.com.au/">
 <meta name="theme-color" content="#18214A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +95,9 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;line-height:1.15;margin
 /* about */
 .about{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
 .portrait{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--navy),#2f3b7a);color:var(--yellow);display:grid;place-items:center;font-size:120px;font-family:Georgia,serif;position:relative;overflow:hidden}
-.portrait span{font-size:20px;font-family:Inter,sans-serif;font-weight:700;position:absolute;bottom:24px;left:24px;color:#fff}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.portrait:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(24,33,74,.85))}
+.portrait span{z-index:1;font-size:20px;font-family:Inter,sans-serif;font-weight:700;position:absolute;bottom:24px;left:24px;color:#fff}
 .creds{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
 .creds li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
 .creds li b{flex:0 0 28px;height:28px;border-radius:8px;background:var(--yellow);display:grid;place-items:center;font-size:14px}
@@ -229,7 +232,7 @@ footer a{color:#fff}
 
 <section id="about">
   <div class="wrap about">
-    <div class="portrait">∫<span>Federico Di Gregorio</span></div>
+    <div class="portrait"><img src="fede.jpg" alt="Federico Di Gregorio, maths tutor" width="800" height="1000" loading="lazy"><span>Federico Di Gregorio</span></div>
     <div>
       <div class="kicker">About me</div>
       <h2>Hi, I'm Fede.</h2>
