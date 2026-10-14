@@ -128,6 +128,17 @@ blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;
 .testi h3{margin:0 0 8px;font-size:22px}
 .testi p{margin:0;color:var(--muted)}
 @media(max-width:760px){.testi{grid-template-columns:1fr}}
+.es-grid{display:grid;grid-template-columns:340px 1fr;gap:48px;align-items:center}
+.es-grid .es-ig{width:100%;height:600px}
+.es-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 20px}
+.es-cards .card{padding:16px}
+.es-cards h3{font-size:16px}
+.es-cards p{font-size:14px}
+.es-list{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}
+.es-list li{padding-left:28px;position:relative}
+.es-list li:before{content:"✓";position:absolute;left:0;color:#b07d00;font-weight:800}
+.es-more{margin:14px 0 0;font-size:14px;color:var(--muted)}
+@media(max-width:860px){.es-grid{grid-template-columns:1fr}.es-grid .es-ig{max-width:340px;margin:0 auto;order:2}.es-cards{grid-template-columns:1fr}}
 /* faq */
 details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
@@ -319,13 +330,25 @@ footer a{color:#fff}
 </section>
 
 <section class="es" lang="es">
-  <div class="wrap box">
+  <div class="wrap es-grid">
+    <iframe class="es-ig" src="https://www.instagram.com/reel/DQNSR5SEUAc/embed/" title="Recta tangente – Matemática 51 CBC" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
     <div>
       <div class="kicker">En español</div>
       <h2>¿Estudiás en Argentina?</h2>
-      <p class="sub" style="margin:0">Clases online de Análisis Matemático, Álgebra y Física para el CBC y la universidad. Escribime por Instagram y armamos un plan para tu materia.</p>
+      <p class="sub">Clases online para el CBC, la secundaria y la universidad, con un profe que empezó a dar clases en 2010 mientras cursaba en la UBA.</p>
+      <div class="es-cards">
+        <div class="card"><h3>CBC</h3><p>Análisis Matemático, Álgebra, Matemática 51 y Física.</p></div>
+        <div class="card"><h3>Secundaria</h3><p>Matemática y Física de 4.º y 5.º año, previas y finales.</p></div>
+        <div class="card"><h3>Universidad</h3><p>Análisis I, Álgebra lineal y Física de primer año.</p></div>
+      </div>
+      <ul class="es-list">
+        <li>Clases en vivo por Google Meet, uno a uno</li>
+        <li>Ejercicios de parciales y finales reales</li>
+        <li>Te enseño a razonar, no a memorizar</li>
+      </ul>
+      <a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a>
+      <p class="es-more">Mirá más clases en <a href="https://www.instagram.com/fede.mathtutor/">@fede.mathtutor</a></p>
     </div>
-    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><iframe class="es-ig" src="https://www.instagram.com/reel/DQNSR5SEUAc/embed/" title="Recta tangente – Matemática 51 CBC" loading="lazy" scrolling="no" allowtransparency="true"></iframe><a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a></div>
   </div>
 </section>
 
