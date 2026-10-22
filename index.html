@@ -82,6 +82,10 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;line-height:1.15;margin
 .step:before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:24px;width:40px;height:40px;border-radius:50%;background:var(--yellow);font-weight:800;display:grid;place-items:center;font-size:18px}
 .step h3{margin:6px 0 6px;font-size:19px}
 .step p{margin:0;color:var(--muted);font-size:15px}
+/* reports */
+.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.report-img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 12px 40px rgba(24,33,74,.12);background:#fff}
+@media(max-width:760px){.report-grid{grid-template-columns:1fr}}
 /* pricing */
 .pricing{background:var(--navy);color:#fff}
 .pricing .sub{color:rgba(255,255,255,.75)}
@@ -193,9 +197,9 @@ footer a{color:#fff}
 
 <header class="hero">
   <div class="wrap">
-    <div class="tag">Online · Anywhere in Australia · English or Spanish</div>
+    <div class="tag">Online across Australia · In person in Bali · English, Spanish or Bahasa Indonesia</div>
     <h1>Senior maths that finally <em>clicks</em>.</h1>
-    <p class="lead">Live one-to-one tutoring for VCE, HSC, SACE and QCE students, with a registered maths teacher who has been tutoring since 2010.</p>
+    <p class="lead">Live one-to-one tutoring for VCE, HSC, SACE, QCE, IB and Cambridge students, with a registered maths teacher who has been tutoring since 2010.</p>
     <div class="ctas">
       <a class="btn btn-y" href="https://calendly.com/fededigregorio12/free-meeting">Book a free 20-min meeting</a>
       <a class="btn btn-o" href="#pricing">See pricing</a>
@@ -225,6 +229,7 @@ footer a{color:#fff}
       <div class="card"><span class="st">NSW</span><h3>HSC</h3><p>Mathematics Advanced and Extension 1, Years 11–12.</p></div>
       <div class="card"><span class="st">SA · NT</span><h3>SACE</h3><p>Mathematical Methods, Specialist and General Mathematics, Stage 1 and 2.</p></div>
       <div class="card"><span class="st">QLD</span><h3>QCE</h3><p>Mathematical Methods, Specialist and General Mathematics, Units 1–4.</p></div>
+      <div class="card"><span class="st">Bali · Online</span><h3>IB &amp; Cambridge</h3><p>IB Mathematics AA and AI (SL and HL), Cambridge IGCSE and A Level. Online, or in person in Bali.</p></div>
       <div class="card"><span class="st">Also</span><h3>Years 9–10, physics &amp; uni</h3><p>Building foundations before senior school, senior physics, and first-year university calculus and algebra.</p></div>
     </div>
   </div>
@@ -238,8 +243,20 @@ footer a{color:#fff}
     <div class="steps">
       <div class="step"><h3>Free 20-min meeting</h3><p>Pick a time on my calendar. We talk about where you're at, what's coming up and where marks are being lost.</p></div>
       <div class="step"><h3>Get a plan</h3><p>I map out the topics and past-paper practice that will make the biggest difference before your next assessment.</p></div>
-      <div class="step"><h3>Weekly lessons</h3><p>Focused one-to-one sessions. Parents get short progress notes so they always know how things are going.</p></div>
+      <div class="step"><h3>Weekly lessons</h3><p>Focused one-to-one sessions. Parents get a one-page progress report every month, so they always know how things are going.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="reports" style="padding-top:0">
+  <div class="wrap report-grid">
+    <div>
+      <div class="kicker">For parents</div>
+      <h2>You'll always know how it's going</h2>
+      <p class="sub">Every month you get a one-page report: results by topic, a chart of scores over time, what we covered and the next steps, in plain English. You get it as a private link and a PDF you can keep.</p>
+      <a class="btn btn-y" href="https://calendly.com/fededigregorio12/free-meeting">Book a free 20-min meeting</a>
+    </div>
+    <img class="report-img" src="sample-report.jpg" alt="Sample monthly progress report for a made-up Year 12 Methods student: average score 70%, a line chart of scores rising from 60% to 90%, topic results, a tutor's comment and next steps." width="800" height="895" loading="lazy">
   </div>
 </section>
 
@@ -306,7 +323,7 @@ footer a{color:#fff}
         <li><b>🎓</b>Master of Teaching (Secondary), Charles Darwin University</li>
         <li><b>∫</b>Master of Atmospheric Sciences, heavy on calculus and statistics</li>
         <li><b>✓</b>Registered teacher in Victoria (VIT) and New South Wales (NESA)</li>
-        <li><b>🗣</b>Lessons in English or Spanish</li>
+        <li><b>🗣</b>Lessons in English, Spanish or Bahasa Indonesia</li>
       </ul>
     </div>
   </div>
@@ -374,6 +391,25 @@ footer a{color:#fff}
       <a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Escribime por Instagram</a>
       <p class="es-more">Mirá más clases en <a href="https://www.instagram.com/fede.mathtutor/">@fede.mathtutor</a></p>
     </div>
+  </div>
+</section>
+
+<section class="es" lang="id" id="bali">
+  <div class="wrap">
+    <div class="kicker">Bahasa Indonesia</div>
+    <h2>Les matematika di Bali</h2>
+    <p class="sub">Les privat matematika untuk siswa sekolah internasional dan nasional plus: IB, Cambridge (IGCSE dan A Level) dan kurikulum Australia. Online atau tatap muka di Bali, dengan guru matematika bersertifikat dari Australia.</p>
+    <div class="es-cards">
+      <div class="card"><h3>IB</h3><p>Mathematics AA dan AI, SL dan HL.</p></div>
+      <div class="card"><h3>Cambridge</h3><p>IGCSE Mathematics dan A Level Mathematics.</p></div>
+      <div class="card"><h3>SMP dan SMA</h3><p>Matematika dan fisika, persiapan ujian.</p></div>
+    </div>
+    <ul class="es-list">
+      <li>Pelajaran dalam bahasa Inggris, dengan penjelasan dalam bahasa Indonesia bila perlu</li>
+      <li>Laporan perkembangan bulanan untuk orang tua</li>
+      <li>Pertemuan pertama 20 menit gratis</li>
+    </ul>
+    <a class="btn btn-y" href="https://ig.me/m/fede.mathtutor">Hubungi saya lewat Instagram</a>
   </div>
 </section>
 
